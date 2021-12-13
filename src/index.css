@@ -1,13 +1,122 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'montseratt', sans-serif;
+  
+}
+.App{
+  background-image: url('assets/lighting.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: 0.4 ease-out;
+}
+.App.Haze{
+  background-image: url('assets/haze.jpg');
+}
+.App.smoke{
+  background-image: url('assets/smoke.jpg');
+}
+.App.cloudy{
+  background-image: url('assets/cloudy.jpg');
+}
+.App.sunny{
+  background-image: url('assets/sunnyDay.jpg');
+}
+.App.rainny{
+  background-image: url('assets/rainny.jpg');
+}
+.App.Snow{
+  background-image: url('assets/snow.jpg');
+}
+main{
+  min-height:100vh ;
+  background-image: linear-gradient(to bottom,rgba(89, 0, 255, 0.315),rgba(0, 0, 0, 0.082));
+  padding:  25px;
+
+}
+.search-box{
+  width:100%;
+  margin: 0px 0px 75px;
+}
+.search-box .search-bar{
+  display: block;
+  padding: 15px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  appearance: none;
+  outline: none;
+  border-radius: 0px 0px 16px 16px;
+  margin-top: -25px;
+  box-shadow: -1px 1px 4px 1px rgb(0 0 0 / 20%);
+  color: black;
+  font-size: 1.2rem;
+  transition: .5 ease-out;
+
+}
+.search-box .search-bar:focus{
+  background-color: rgba(255, 255, 255, 0.788);
+}
+.location-box .location{
+  font-size:48px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  text-shadow: 3px 3px  rgba(50, 50, 70, 0.5);
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.location-box .Date{
+  color:#fff;
+  font-size:20px;
+  text-align: center;
+  font-family: italic;
+  text-shadow: 2px 2px  rgba(50, 50, 70, 0.5);
+}
+.weather-box{
+  text-align: center;
+}
+
+.weather-box .temp{
+  position: relative;
+  display: inline-block;
+  font-size: 102px;
+  background-color: rgba(255, 255, 255, 0.384);
+  margin:10px auto;
+  padding: 15px 25px;
+  border-radius: 16px;
+  color:white;
+  text-shadow: 3px 6px  rgba(50, 50, 70, 0.26);
+  text-align: center;
+  font-weight: 800;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.205);
+}
+.date-box{
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-evenly;
+  width: 345px;
+}
+.weather-box .weather-type{
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 3px 6px  rgba(50, 50, 70, 0.5);
+}
+.error-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.error-box p{
+  margin-top: revert;
+  text-align: center;
+}
+.error-box div{
+  font-size: calc(18px + 2vmin);
+  font-weight: 900;
 }
