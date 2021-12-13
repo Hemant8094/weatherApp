@@ -2,9 +2,9 @@ import React,{useState,useEffect} from "react";
 import WarningIcon from '@material-ui/icons/Warning';
 
 const Api  = {
-  key:"e1461eecf79ff00c247b492b3126160c",
+  key: process.env.REACT_APP_WEATHER_API_KEY,
   base: 'https://api.openweathermap.org/data/2.5/',
-  NewsApiKey:"309db41e077b4164a4456ec8c3d7bf68",
+
   NewsApiBase:"https://newsapi.org/v2/top-headlines?country"
 }
 
@@ -55,12 +55,12 @@ function App() {
         console.log(result)
       })
     }
-    const getWeatherNews= (country)=>{
-      fetch(`${Api.NewsApiBase}=${country}&category=business&apiKey=${Api.NewsApiKey}`)
-      .then(res=>res.json())
-      .then(news=>setnewsWeather(news))
-      console.log(newsWeather)
-    }
+    // const getWeatherNews= (country)=>{
+    //   fetch(`${Api.NewsApiBase}=${country}&category=business&apiKey=${Api.NewsApiKey}`)
+    //   .then(res=>res.json())
+    //   .then(news=>setnewsWeather(news))
+    //   console.log(newsWeather)
+    // }
     const CurrentWeather = ()=>{
 
       const success = (position)=>{
@@ -75,7 +75,7 @@ function App() {
     }
     useEffect(()=>{
       CurrentWeather()
-      getWeatherNews("IN")
+      // getWeatherNews("IN")
       
     },[])
 
