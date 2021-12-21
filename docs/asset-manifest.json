@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/weatherApp/static/css/main.6e8ca542.chunk.css",
-    "main.js": "/weatherApp/static/js/main.0332378d.chunk.js",
-    "main.js.map": "/weatherApp/static/js/main.0332378d.chunk.js.map",
+    "main.css": "/weatherApp/static/css/main.b78a5464.chunk.css",
+    "main.js": "/weatherApp/static/js/main.48aa67d8.chunk.js",
+    "main.js.map": "/weatherApp/static/js/main.48aa67d8.chunk.js.map",
     "runtime-main.js": "/weatherApp/static/js/runtime-main.e4d741ed.js",
     "runtime-main.js.map": "/weatherApp/static/js/runtime-main.e4d741ed.js.map",
-    "static/js/2.d61f0716.chunk.js": "/weatherApp/static/js/2.d61f0716.chunk.js",
-    "static/js/2.d61f0716.chunk.js.map": "/weatherApp/static/js/2.d61f0716.chunk.js.map",
+    "static/js/2.ad279d58.chunk.js": "/weatherApp/static/js/2.ad279d58.chunk.js",
+    "static/js/2.ad279d58.chunk.js.map": "/weatherApp/static/js/2.ad279d58.chunk.js.map",
     "static/js/3.a202b264.chunk.js": "/weatherApp/static/js/3.a202b264.chunk.js",
     "static/js/3.a202b264.chunk.js.map": "/weatherApp/static/js/3.a202b264.chunk.js.map",
     "index.html": "/weatherApp/index.html",
-    "static/css/main.6e8ca542.chunk.css.map": "/weatherApp/static/css/main.6e8ca542.chunk.css.map",
-    "static/js/2.d61f0716.chunk.js.LICENSE.txt": "/weatherApp/static/js/2.d61f0716.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/weatherApp/static/media/sunnyDay.2d758c66.jpg"
+    "static/css/main.b78a5464.chunk.css.map": "/weatherApp/static/css/main.b78a5464.chunk.css.map",
+    "static/js/2.ad279d58.chunk.js.LICENSE.txt": "/weatherApp/static/js/2.ad279d58.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/weatherApp/static/media/sunnyDay.57d8ea7c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e4d741ed.js",
-    "static/js/2.d61f0716.chunk.js",
-    "static/css/main.6e8ca542.chunk.css",
-    "static/js/main.0332378d.chunk.js"
+    "static/js/2.ad279d58.chunk.js",
+    "static/css/main.b78a5464.chunk.css",
+    "static/js/main.48aa67d8.chunk.js"
   ]
 }
