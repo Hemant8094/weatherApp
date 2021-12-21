@@ -4,8 +4,6 @@ import WarningIcon from '@material-ui/icons/Warning';
 const Api  = {
   key: process.env.REACT_APP_WEATHER_API_KEY,
   base: 'https://api.openweathermap.org/data/2.5/',
-
-  NewsApiBase:"https://newsapi.org/v2/top-headlines?country"
 }
 
 function App() {
@@ -13,7 +11,7 @@ function App() {
   const [query,setQuery] = useState('')
   const [time,setTime] = useState(new Date().toLocaleTimeString())
   const [weather,setWeather] = useState({})
-  const [newsWeather,setnewsWeather] = useState({})
+
 
     const changingBackground = ()=>{
       if(typeof weather.main !== "undefined"&& weather.weather[0].main ==="Rain"){
@@ -55,19 +53,27 @@ function App() {
         console.log(result)
       })
     }
-    // const getWeatherNews= (country)=>{
-    //   fetch(`${Api.NewsApiBase}=${country}&category=business&apiKey=${Api.NewsApiKey}`)
-    //   .then(res=>res.json())
-    //   .then(news=>setnewsWeather(news))
-    //   console.log(newsWeather)
-    // }
+
     const CurrentWeather = ()=>{
 
       const success = (position)=>{
         getWeatherData(position.coords.latitude,position.coords.longitude)
       }
+  
+    
       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(success);
+        navigator.permissions
+        .query({ name: "geolocation" })
+        .then(function (result) {
+          if (result.state === "granted") {
+            navigator.geolocation.getCurrentPosition(success);
+          } else if (result.state === "prompt") {
+            alert("Please, turn on your location and refresh it")
+            navigator.geolocation.getCurrentPosition(success);
+          } else if (result.state === "denied") {
+            alert("permission needed for current location ")
+          }
+        })
       }
       else {
         alert('Your browser does not support location tracking, or permission is denied.');
@@ -75,7 +81,6 @@ function App() {
     }
     useEffect(()=>{
       CurrentWeather()
-      // getWeatherNews("IN")
       
     },[])
 
